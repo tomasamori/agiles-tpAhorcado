@@ -14,7 +14,7 @@ namespace TestAhorcado
         {
             AhorcadoClase ahorcado = new AhorcadoClase();
 
-            Assert.AreEqual("palabra", ahorcado.generarPalabra());
+            Assert.AreEqual(ahorcado.palabra.ToLower(), ahorcado.generarPalabra());
         }
 
         [Test]

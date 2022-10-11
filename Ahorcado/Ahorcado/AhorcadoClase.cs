@@ -2,20 +2,22 @@
 {
     public class AhorcadoClase
     {
-        private string palabra = "palabra";
+        public string palabra = "PALABRA";
 
         public string generarPalabra()
         {
-            return palabra;
+            return palabra.ToLower();
         }
 
         public List<int> adivinarLetra(char letra)
         {
             List<int> lugares = new List<int>();
 
-            for (int i = 0; i < palabra.Length; i++)
+            string palabraLowerCase = palabra.ToLower();
+
+            for (int i = 0; i < palabraLowerCase.Length; i++)
             {
-                if (palabra[i] == letra)
+                if (palabraLowerCase[i] == letra)
                 {
                     lugares.Add(i);
                 }

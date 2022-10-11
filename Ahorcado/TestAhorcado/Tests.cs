@@ -46,5 +46,29 @@ namespace TestAhorcado
 
             Assert.AreEqual(testVida, ahorcado.getVida());
         }
+
+        [Test]
+        public void ValidarQuePerdio()
+        {
+            AhorcadoClase ahorcado = new AhorcadoClase();
+
+            List<int> l;
+            int testVida = 6;
+            string abecedario = "abcdefghijklmnopqrstuvwxyz";
+            Random rand = new Random();
+
+            while (ahorcado.getVida()!=0)
+            {
+                int posicion = rand.Next(abecedario.Length);
+                l = ahorcado.adivinarLetra(abecedario[posicion]);
+
+                if (l.Count == 0)
+                {
+                    testVida = testVida - 1;
+                }
+            }
+
+            Assert.AreEqual(testVida, ahorcado.getVida());
+        }
     }
 }

@@ -3,6 +3,7 @@
     public class AhorcadoClase
     {
         public string palabra = "PALABRA";
+        public int vida = 6;
 
         public string generarPalabra()
         {
@@ -24,7 +25,17 @@
 
             }
 
+            if (lugares.Count == 0)
+            {
+                this.vida = this.vida - 1;
+            }
+
             return lugares;
+        }
+
+        public int getVida()
+        {
+            return this.vida;
         }
     }
 }

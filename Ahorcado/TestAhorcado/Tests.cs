@@ -28,5 +28,23 @@ namespace TestAhorcado
             
             Assert.AreEqual(l, ahorcado.adivinarLetra('a'));
         }
+
+        [Test]
+        public void ValidarQuitarVida()
+        {
+            AhorcadoClase ahorcado = new AhorcadoClase();
+
+            List<int> l;
+            int testVida = 6;
+
+            l = ahorcado.adivinarLetra('e');
+
+            if (l.Count == 0)
+            {
+                testVida = testVida - 1;
+            }
+
+            Assert.AreEqual(testVida, ahorcado.getVida());
+        }
     }
 }

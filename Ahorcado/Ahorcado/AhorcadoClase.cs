@@ -37,5 +37,13 @@
         {
             return this.vida;
         }
+
+        public void adivinarPalabra(string palabra)
+        {
+            if (palabra != this.generarPalabra())
+            {
+                this.vida = 0;
+            }
+        }
     }
 }

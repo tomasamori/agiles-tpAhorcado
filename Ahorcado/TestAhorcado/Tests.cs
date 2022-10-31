@@ -70,5 +70,18 @@ namespace TestAhorcado
 
             Assert.AreEqual(testVida, ahorcado.getVida());
         }
+
+        [Test]
+        public void ValidarQuePierdeConPalabraIncorrecta()
+        {
+            AhorcadoClase ahorcado = new AhorcadoClase();
+
+            string palabraPrueba = "hola";
+
+            ahorcado.adivinarPalabra(palabraPrueba);
+
+            Assert.AreEqual(0, ahorcado.getVida());
+        }
+
     }
 }

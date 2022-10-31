@@ -10,3 +10,15 @@ C:\Users\tamori\workspace\agiles\Ahorcado\Ahorcado\obj\Debug\net6.0\Ahorcado.dll
 C:\Users\tamori\workspace\agiles\Ahorcado\Ahorcado\obj\Debug\net6.0\refint\Ahorcado.dll
 C:\Users\tamori\workspace\agiles\Ahorcado\Ahorcado\obj\Debug\net6.0\Ahorcado.pdb
 C:\Users\tamori\workspace\agiles\Ahorcado\Ahorcado\obj\Debug\net6.0\ref\Ahorcado.dll
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\bin\Debug\net6.0\Ahorcado.deps.json
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\bin\Debug\net6.0\Ahorcado.dll
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\bin\Debug\net6.0\Ahorcado.pdb
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\obj\Debug\net6.0\Ahorcado.csproj.AssemblyReference.cache
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\obj\Debug\net6.0\Ahorcado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\obj\Debug\net6.0\Ahorcado.AssemblyInfoInputs.cache
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\obj\Debug\net6.0\Ahorcado.AssemblyInfo.cs
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\obj\Debug\net6.0\Ahorcado.csproj.CoreCompileInputs.cache
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\obj\Debug\net6.0\Ahorcado.dll
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\obj\Debug\net6.0\refint\Ahorcado.dll
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\obj\Debug\net6.0\Ahorcado.pdb
+C:\Users\tamori\workspace\agiles\agiles-tpAhorcado\Ahorcado\Ahorcado\obj\Debug\net6.0\ref\Ahorcado.dll

@@ -8,27 +8,34 @@ namespace TestAhorcado
         public void Setup()
         {
         }
-
+        
         [Test]
-        public void ValidarPalabra()
+        public void ValidarLetraCorrecta()
         {
-            AhorcadoClase ahorcado = new AhorcadoClase();
+            AhorcadoClase ahorcado = new AhorcadoClase("palabra", 7);
 
-            Assert.AreEqual(ahorcado.palabra.ToLower(), ahorcado.generarPalabra());
+            Assert.AreEqual("Acierto", ahorcado.adivinarLetra('a'));
         }
 
         [Test]
-        public void ValidarLetra()
+        public void ValidarLetraIncorrecta()
         {
-            AhorcadoClase ahorcado = new AhorcadoClase();
-            List<int> l = new List<int>();
-            l.Add(1);
-            l.Add(3);
-            l.Add(6);
-            
-            Assert.AreEqual(l, ahorcado.adivinarLetra('a'));
+            AhorcadoClase ahorcado = new AhorcadoClase("palabra", 7);
+
+            Assert.AreEqual("Letra incorrecta", ahorcado.adivinarLetra('k'));
         }
 
+        [Test]
+        public void ValidarEstadoPalabra()
+        {
+            AhorcadoClase ahorcado = new AhorcadoClase("palabra", 7);
+
+            ahorcado.adivinarLetra('a');
+
+            Assert.AreEqual("_a_a__a", ahorcado.estadoPalabra);
+        }
+
+        /*
         [Test]
         public void ValidarQuitarVida()
         {
@@ -54,34 +61,10 @@ namespace TestAhorcado
 
             List<int> l;
             int testVida = 6;
-            string abecedario = "abcdefghijklmnopqrstuvwxyz";
-            Random rand = new Random();
-
-            while (ahorcado.getVida()!=0)
-            {
-                int posicion = rand.Next(abecedario.Length);
-                l = ahorcado.adivinarLetra(abecedario[posicion]);
-
-                if (l.Count == 0)
-                {
-                    testVida = testVida - 1;
-                }
-            }
+            
 
             Assert.AreEqual(testVida, ahorcado.getVida());
         }
-
-        [Test]
-        public void ValidarQuePierdeConPalabraIncorrecta()
-        {
-            AhorcadoClase ahorcado = new AhorcadoClase();
-
-            string palabraPrueba = "hola";
-
-            ahorcado.adivinarPalabra(palabraPrueba);
-
-            Assert.AreEqual(0, ahorcado.getVida());
-        }
-
+        */
     }
 }

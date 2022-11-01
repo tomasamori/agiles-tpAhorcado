@@ -1,49 +1,80 @@
-﻿namespace Ahorcado
+﻿using System.Text;
+
+namespace Ahorcado
 {
     public class AhorcadoClase
     {
-        public string palabra = "PALABRA";
-        public int vida = 6;
+        public string palabra;
+        public int vida;
+        public List<char> letrasCorrectas;
+        public List<char> letrasIncorrectas;
+        public string estadoPalabra;
 
-        public string generarPalabra()
+        public AhorcadoClase(string palabra, int vida)
         {
-            return palabra.ToLower();
+            this.palabra = palabra.ToLower();
+            this.vida = vida;
+            this.estadoPalabra = "";
+            for (int i = 0; i < this.palabra.Length; i++)
+            {
+                this.estadoPalabra += "_";
+            }
+            this.letrasCorrectas = new List<char>();
+            this.letrasIncorrectas = new List<char>();
         }
 
-        public List<int> adivinarLetra(char letra)
+        public string getPalabra()
         {
-            List<int> lugares = new List<int>();
+            return this.palabra;
+        }
 
-            string palabraLowerCase = palabra.ToLower();
+        public string adivinarLetra(char letra)
+        {
+            char letraLower = char.ToLower(letra);
+            int cont = 0;
 
-            for (int i = 0; i < palabraLowerCase.Length; i++)
+            if (validarLetra(letra))
             {
-                if (palabraLowerCase[i] == letra)
+                if (!this.letrasCorrectas.Contains(letraLower))
                 {
-                    lugares.Add(i);
+                    for (int i = 0; i < this.palabra.Length; i++)
+                    {
+                        if (this.palabra[i] == letraLower)
+                        {
+                            this.letrasCorrectas.Add(letraLower);
+                            StringBuilder sb = new StringBuilder(this.estadoPalabra);
+                            sb[i] = letraLower;
+                            this.estadoPalabra = sb.ToString();
+                            cont++;
+                        }
+
+                    }
                 }
 
+                else return "La letra ya fue ingresada";
+                
+                if (cont == 0)
+                {
+                    this.vida = this.vida - 1;
+                    this.letrasIncorrectas.Add(letra);
+                    return "Letra incorrecta";
+                }
+
+                return "Acierto";
             }
 
-            if (lugares.Count == 0)
-            {
-                this.vida = this.vida - 1;
-            }
+            return "Debe ingresar una letra valida";
+        }
 
-            return lugares;
+        public bool validarLetra(char letra)
+        {
+            if (char.IsLetter(letra)) return true;
+            return false;
         }
 
         public int getVida()
         {
             return this.vida;
-        }
-
-        public void adivinarPalabra(string palabra)
-        {
-            if (palabra != this.generarPalabra())
-            {
-                this.vida = 0;
-            }
         }
     }
 }

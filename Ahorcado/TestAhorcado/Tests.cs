@@ -42,6 +42,20 @@ namespace TestAhorcado
         }
 
         [Test]
+        public void ValidarEspacioBlanco()
+        {
+            AhorcadoClase ahorcado = new AhorcadoClase("palabra", 7);
+            Assert.AreEqual("Debe ingresar una letra valida", ahorcado.adivinarLetra(' '));
+        }
+
+        [Test]
+        public void ValidarComa()
+        {
+            AhorcadoClase ahorcado = new AhorcadoClase("palabra", 7);
+            Assert.AreEqual("Debe ingresar una letra valida", ahorcado.adivinarLetra(','));
+        }
+
+        [Test]
         public void ValidarEstadoPalabra()
         {
             AhorcadoClase ahorcado = new AhorcadoClase("palabra", 7);
@@ -50,7 +64,6 @@ namespace TestAhorcado
 
             Assert.AreEqual("_a_a__a", ahorcado.estadoPalabra);
         }
-
         
         [Test]
         public void ValidarQuitarVida()

@@ -18,11 +18,27 @@ namespace TestAhorcado
         }
 
         [Test]
+        public void ValidarLetraMayusculaCorrecta()
+        {
+            AhorcadoClase ahorcado = new AhorcadoClase("palabra", 7);
+
+            Assert.AreEqual("Acierto", ahorcado.adivinarLetra('A'));
+        }
+
+        [Test]
         public void ValidarLetraIncorrecta()
         {
             AhorcadoClase ahorcado = new AhorcadoClase("palabra", 7);
 
             Assert.AreEqual("Letra incorrecta", ahorcado.adivinarLetra('k'));
+        }
+
+        [Test]
+        public void ValidarLetraIncorrectaMayuscula()
+        {
+            AhorcadoClase ahorcado = new AhorcadoClase("palabra", 7);
+
+            Assert.AreEqual("Letra incorrecta", ahorcado.adivinarLetra('K'));
         }
 
         [Test]

@@ -2,16 +2,14 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build_and_test:
     
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -38,3 +36,25 @@ jobs:
         path: "**/test-results.trx"
         reporter: dotnet-trx
         fail-on-error: true
+        
+    - name: Test Collect
+      run: dotnet test Ahorcado/Ahorcado.sln --collect:"XPlat Code Coverage"
+      
+    - name: ReportGenerator
+      uses: danielpalme/ReportGenerator-GitHub-Action@5.1.12
+      with:
+        # The coverage reports that should be parsed (separated by semicolon). Globbing is supported.
+        reports: "**/coverage.cobertura.xml"
+        # The directory where the generated report should be saved.
+        targetdir: "coveragereport"
+        # The output formats and scope (separated by semicolon) Values: Badges, Clover, Cobertura, CsvSummary, Html, HtmlChart, HtmlInline, HtmlInline_AzurePipelines, HtmlInline_AzurePipelines_Dark, HtmlSummary, JsonSummary, Latex, LatexSummary, lcov, MHtml, PngChart, SonarQube, TeamCitySummary, TextSummary, Xml, XmlSummary
+        reporttypes: Html
+        
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.1
+      with:
+        # Artifact name
+        name: "coveragereport"
+        # A file, directory or wildcard pattern that describes what to upload
+        path: "**/coveragereport"
+        # The desired behavior if no files are found using the provided path.

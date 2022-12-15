@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "22RhWSe81Q3r6RnMpGhGMtpiD53DltFEd7W5DmA873YT3JvExxPYVBXlJEac86Tqozq+n88Njakcml4BbVR+tw==",
+  "dgSpecHash": "iO88UGEaCy9NrC3P4gj4PwcwI7mQ40pqtMRY6MP1aYCcMvoukvEciXNJTRIwph/on+hWBDzlclxixkPOXyyl9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tamori\\workspace\\agiles\\agiles-tpAhorcado\\Ahorcado\\TestAhorcado\\TestAhorcado.csproj",
+  "projectFilePath": "C:\\Users\\tamori\\workspace\\agiles\\agiles-tpAhorcado\\Ahorcado\\TestAhorcado\\Ahorcado.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tamori\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\tamori\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

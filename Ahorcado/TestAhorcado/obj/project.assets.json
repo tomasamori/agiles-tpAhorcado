@@ -3989,9 +3989,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tamori\\workspace\\agiles\\agiles-tpAhorcado\\Ahorcado\\TestAhorcado\\TestAhorcado.csproj",
-      "projectName": "TestAhorcado",
-      "projectPath": "C:\\Users\\tamori\\workspace\\agiles\\agiles-tpAhorcado\\Ahorcado\\TestAhorcado\\TestAhorcado.csproj",
+      "projectUniqueName": "C:\\Users\\tamori\\workspace\\agiles\\agiles-tpAhorcado\\Ahorcado\\TestAhorcado\\Ahorcado.Test.csproj",
+      "projectName": "Ahorcado.Test",
+      "projectPath": "C:\\Users\\tamori\\workspace\\agiles\\agiles-tpAhorcado\\Ahorcado\\TestAhorcado\\Ahorcado.Test.csproj",
       "packagesPath": "C:\\Users\\tamori\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\tamori\\workspace\\agiles\\agiles-tpAhorcado\\Ahorcado\\TestAhorcado\\obj\\",
       "projectStyle": "PackageReference",
